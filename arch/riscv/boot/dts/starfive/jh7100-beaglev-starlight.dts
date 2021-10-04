@@ -125,6 +125,9 @@
 };
 
 &gmac {
+	assigned-clocks = <&clkgen JH7100_CLK_GMAC_TX>, <&clkgen JH7100_CLK_GMAC_GTX>;
+	assigned-clock-parents = <&clkgen JH7100_CLK_GMAC_GTX>;
+	assigned-clock-rates = <0>, <2500000>;
 	snps,reset-gpios = <&gpio 63 GPIO_ACTIVE_LOW>;
 	starfive,gtxclk-dlychain = <4>;
 	pinctrl-names = "default";
