@@ -189,7 +189,7 @@
 		};
 
 		gmac: ethernet@10020000 {
-			compatible = "snps,dwmac";
+			compatible = "starfive,jh7100-gmac", "snps,dwmac";
 			reg = <0x0 0x10020000 0x0 0x10000>;
 			clocks = <&clkgen JH7100_CLK_GMAC_GTX>,
 				 <&clkgen JH7100_CLK_GMAC_AHB>,
@@ -203,6 +203,7 @@
 			phy-mode = "rgmii-txid";
 			snps,multicast-filter-bins = <256>;
 			snps,perfect-filter-entries = <128>;
+			starfive,syscon = <&sysmain>;
 			rx-fifo-depth = <32768>;
 			tx-fifo-depth = <16384>;
 			snps,axi-config = <&stmmac_axi_setup>;

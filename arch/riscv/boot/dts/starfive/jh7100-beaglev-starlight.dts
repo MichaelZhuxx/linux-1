@@ -126,6 +126,7 @@
 
 &gmac {
 	snps,reset-gpios = <&gpio 63 GPIO_ACTIVE_LOW>;
+	starfive,gtxclk-dlychain = <4>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&gmac_pins>;
 	status = "okay";
