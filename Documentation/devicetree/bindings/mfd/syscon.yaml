@@ -55,6 +55,7 @@ properties:
               - samsung,exynos4-sysreg
               - samsung,exynos5-sysreg
               - samsung,exynos5433-sysreg
+              - starfive,jh7100-sysmain
 
           - const: syscon
 
