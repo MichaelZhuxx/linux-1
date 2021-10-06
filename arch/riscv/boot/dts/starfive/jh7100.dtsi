@@ -288,6 +288,11 @@
 			#reset-cells = <1>;
 		};
 
+		sysmain: syscon@11850000 {
+			compatible = "starfive,jh7100-sysmain", "syscon";
+			reg = <0x0 0x11850000 0x0 0x10000>;
+		};
+
 		qspi: spi@11860000 {
 			compatible = "cdns,qspi-nor";
 			reg = <0x0 0x11860000 0x0 0x10000>,
